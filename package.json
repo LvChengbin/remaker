@@ -1,0 +1,42 @@
+{
+    "name": "remaker",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "git@github.com:LvChengbin/remaker.git",
+    "author": "LvChengbin <lvchengbin59@gmail.com>",
+    "license": "MIT",
+    "packageManager": "yarn@3.3.1",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "test:all": "jest",
+        "lint": "eslint --ignore-path .eslintignore --cache",
+        "lint:staged": "lint-staged",
+        "lint:all" : "echo 'Linting the whole repo...' && eslint packages/**/*.{ts,js,tsx,jsx} --ignore-path .eslintignore --cache --cache-strategy content",
+        "eslint_d:stop": "eslint_d stop",
+        "eslint_d:start": "eslint_d start",
+        "eslint_d:restart": "run eslint_d:stop && run eslint_d:start"
+    },
+    "devDependencies": {
+        "@types/jest": "^29.2.4",
+        "@types/node": "^18.11.17",
+        "@typescript-eslint/eslint-plugin": "^5.47.0",
+        "@typescript-eslint/parser": "^5.47.0",
+        "commitizen": "^4.2.6",
+        "cz-customizable": "^7.0.0",
+        "eslint": "^8.30.0",
+        "eslint_d": "^12.2.1",
+        "husky": "^8.0.2",
+        "jest": "^29.3.1",
+        "lint-staged": "^13.1.0",
+        "ts-jest": "^29.0.3",
+        "typescript": "^4.9.4"
+    },
+    "config": {
+        "commitizen": {
+            "path": "cz-customizable"
+        }
+    }
+}

@@ -102,3 +102,17 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Jest cache files
+.jest-cache
+
+# yarn 2 ignored files
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+packages/remaker/lib

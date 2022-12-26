@@ -1,0 +1,25 @@
+name: Commit Checking 
+on: [ push ]
+jobs:
+    Linting-Checking:
+        runs-on: ubuntu-latest
+        steps: 
+            - uses: actions/checkout@v2
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: '18'
+            - uses: actions/cache@v2
+              with:
+                  path: .eslintcache
+                  key: eslintcache-${{ hashFiles( 'package.json', '.eslintrc.js', '.eslintignore' ) }}
+
+            - uses: actions/cache@v2
+              with:
+                  path: .jest-cache
+                  key: jestcache-${{ hashFiles( 'package.json', 'jest.base.config.js' ) }}
+
+            - run: npm i -g yarn
+            - run: yarn cache clean
+            - run: yarn
+            - run: yarn lint:all
+            - run: yarn test:all --coverage --colors --ci
