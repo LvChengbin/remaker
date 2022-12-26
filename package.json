@@ -1,0 +1,8 @@
+{
+  "name": "remaker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:LvChengbin/remaker.git",
+  "author": "LvChengbin <lvchengbin59@gmail.com>",
+  "license": "MIT"
+}
