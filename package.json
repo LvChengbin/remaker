@@ -4,5 +4,6 @@
   "main": "index.js",
   "repository": "git@github.com:LvChengbin/remaker.git",
   "author": "LvChengbin <lvchengbin59@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "packageManager": "yarn@3.3.1"
 }
